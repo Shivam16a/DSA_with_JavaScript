@@ -18,6 +18,25 @@
         //     document.write(`${arr[i]}<br>`);
         // }
 
+
+        let newarr = [2, 7, 15, 8, 6, 3];
+
+        console.warn(newarr)
+        // let insarr =  newarr.splice(2,0,9);
+        // console.warn(newarr)
+
+        let pos = 2
+
+        for (let k = newarr.length; k > pos; k--) {
+            newarr[k] = newarr[k - 1]
+        }
+
+        newarr[pos] = 23
+        // for(let h=0; h<=newarr.length; h++){
+        //     console.warn(`index of ${h} of element is ${newarr[h]}`)
+        // }
+        console.warn(newarr)
+
         function insertElement() {
             let arr = [7, 8, 9, 4, 10, 25, 0, 13];
             const element = document.getElementById("element").value;
