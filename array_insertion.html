@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insertion</title>
+    <script>
+        // let arr = [7,8,9,4,10,25,0,13];
+        // const element = 45;
+        // const position = 2;
+        // for(let i=0;i<=arr.length-1;i++){
+        //     document.write(`position is : ${i} Element is: ${arr[i]} : `)
+        //     if(i===position){
+        //         arr[i+1]=arr[i]
+        //         arr[position] = element;
+        //     }
+        //     document.write(`${arr[i]}<br>`);
+        // }
+
+        function insertElement() {
+            let arr = [7, 8, 9, 4, 10, 25, 0, 13];
+            const element = document.getElementById("element").value;
+            const position = document.getElementById("position").value;
+            let result = document.getElementById("result");
+            po = parseInt(position)
+            // alert(`position is : ${typeof(po)} element is : ${element}`)
+            el = parseInt(element)
+
+            result.innerHTML = `${arr} <br>`
+            // alert(typeof (el))
+            for (let i = arr.length; i > po; i--) {
+                arr[i] = arr[i - 1]
+            }
+            arr[po] = el;
+
+            for (let j = 0; j <= arr.length - 1; j++) {
+                result.innerHTML += `${j} of array is : ${arr[j]} <br>`
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="position" placeholder="position">
+    <input type="text" id="element" placeholder="element">
+    <button onclick="insertElement()">Insert Element</button>
+
+    <p id="result"></p>
+</body>
+
+</html>
