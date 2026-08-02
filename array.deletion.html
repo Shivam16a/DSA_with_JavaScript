@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Deletion</title>
+    <script>
+        // let data = [7, 8, 2, 10, 23, 30];
+        // let position = 2
+        // console.warn(data);
+        // for(let i=position;i<data.length;i++){
+        //     data[i] = data[i+1]
+        // }
+        // data.length = data.length-1
+        // console.warn(data)
+
+        function deleteEL() {
+            let data = [7, 8, 2, 10, 23, 30];
+            let position = document.getElementById("position").value;
+            position = parseInt(position);
+            console.warn(data);
+            for (let i = position; i < data.length; i++) {
+                data[i] = data[i + 1]
+            }
+            data.length = data.length - 1
+            console.warn(data)
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="position" placeholder="position">
+    <button onclick="deleteEL()">Remove</button>
+
+</body>
+
+</html>
