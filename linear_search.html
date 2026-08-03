@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+    <script>
+        // let data = [14, 12, 10, 20, 50, 60, 53]
+        // let element = 53;
+        // for (let i = 0; i < data.length; i++) {
+        //     // console.warn(data[i]);
+        //     if (element === data[i]) {
+        //         console.warn(i);
+        //         break;
+        //     }
+        // }
+
+        function findIn() {
+            let data = [14, 12, 10, 20, 50, 60, 53]
+            let element = document.getElementById("find").value;
+            for (let i = 0; i < data.length; i++) {
+                // console.warn(data[i]);
+                if (element == data[i]) {
+                    console.warn(i);
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="Eneter element" id="find">
+    <button onclick="findIn()">Find element</button>
+</body>
+
+</html>
