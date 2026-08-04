@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge array</title>
+    <script>
+        let data = [100, 78, 56, 52, 14, 65, 23];
+        let data1 = [45, 12, 36, 72, 10];
+        let data2 = [];
+
+        for (i = 0; i < data.length; i++) {
+            data2[i] = data[i];
+        }
+        for (i = 0; i < data1.length; i++) {
+            data2[data2.length ] = data1[i]
+            // console.warn(data2.length)
+        }
+        console.warn(data2);
+        console.warn(data2.reverse());
+        console.warn(data2.splice(2,1))
+        console.warn(data2)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
