@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursion</title>
     <script>
-        function apple(a) {
-            if (a === 10) {
-                // console.warn("hello", a)
-                return;
+        // function apple(a) {
+        //     if (a === 10) {
+        //         // console.warn("hello", a)
+        //         return;
+        //     }
+        //     console.warn("hello",a)
+        //     apple(a + 1)
+        //     console.warn(a)
+        // }
+        // apple(1);
+
+        let data = 5;
+
+
+        function fectorial(x) {
+            if (x === 0) {
+                return 1;
             }
-            console.warn("hello",a)
-            apple(a + 1)
-            console.warn(a)
+            return x * fectorial(x - 1)
+
         }
-        apple(1);
+
+        console.warn(fectorial(data));
     </script>
 </head>
 
