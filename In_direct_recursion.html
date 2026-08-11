@@ -9,12 +9,20 @@
         let totalMoney = 100;
         let apple = 0;
         function byapple(x) {
-            money(apple);
+            if (x > 0) {
+                console.warn("I have",x,"Rs",apple);
+                bymore(x);
+            }else{
+                console.warn("I don't have more money",apple);
+            }
         }
 
-        function money(x) {
-            byapple(totalMoney);
+        function bymore(x) {
+            apple++
+            byapple(x-20);
         }
+
+        byapple(totalMoney)
     </script>
 </head>
 
