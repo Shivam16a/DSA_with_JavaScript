@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Array Using Recursion</title>
+    <script>
+        let data = [20, 3, 12, 4, 30, 1, 5, 9];
+        let temp;
+        // console.warn(data);
+        function reversearr(data, start, end) {
+            if (start >= end) {
+                return;
+            }
+            temp = data[start];
+            data[start] = data[end];
+            data[end] = temp;
+
+            reversearr(data, start + 1, end - 1);
+            console.warn(data);
+        }
+        reversearr(data, 0, data.length - 1)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
