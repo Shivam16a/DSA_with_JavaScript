@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let max = 5;
+
+        function push(newvalue) {
+            if (currentSize >= max) {
+                alert("Stack is Overflow you can not enter the element " + newvalue);
+                return;
+            }
+            data[currentSize] = newvalue;
+            currentSize += 1;
+        }
+        push(10)
+        push(15)
+        push(2)
+        push(23)
+        push(8)
+        // push(12)
+
+        function pop() {
+            if (currentSize > 0) {
+                currentSize = currentSize - 1;
+                data[currentSize];
+                data.length = currentSize;
+            } else {
+                alert("stack is already empty");
+                return;
+            }
+        }
+
+        // pop()
+        // pop()
+        // pop()
+        // pop()
+        // pop()
+
+        console.warn(data);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
