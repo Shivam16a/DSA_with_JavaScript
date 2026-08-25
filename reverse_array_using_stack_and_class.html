@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Array using Stack and Class</title>
+
+    <script>
+        class ReverseStack {
+            item = [];
+            currentSize;
+            maxSize;
+
+            constructor(size) {
+                this.maxSize = size;
+                this.currentSize = 0;
+            }
+
+            push(newVal) {
+                if (this.currentSize >= this.maxSize) {
+                    console.log("Stack is full");
+                    return;
+                }
+
+                this.item[this.currentSize] = newVal;
+                this.currentSize++;
+            }
+
+            pop() {
+                if (this.currentSize === 0) {
+                    console.log("Stack is empty");
+                    return;
+                }
+
+                let lastRemovedItem = this.item[this.currentSize - 1];
+
+                this.currentSize--;
+                this.item.length = this.currentSize;
+
+                return lastRemovedItem;
+            }
+
+            reverse(item) {
+                // Array ke elements stack mein push karo
+                for (let i = 0; i < item.length; i++) {
+                    this.push(item[i]);
+                }
+
+                // Stack se pop karke original array mein daalo
+                for (let i = 0; i < item.length; i++) {
+                    item[i] = this.pop();
+                }
+
+                return item;
+            }
+        }
+
+        let str = "shivam";
+        str = str.split("");
+
+        let stack = new ReverseStack(str.length);
+
+        let result = stack.reverse(str);
+
+        console.warn(result);
+        console.warn(result.join(""));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
