@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Short Array </title>
     <script>
-        let data = [23,12,3,25,30,29,10,1,89,40];
+        // short array 
+        let data = [23, 12, 3, 25, 30, 29, 10, 1, 89, 40];
 
-        for(i=0;i<data.length;i++){
-            for(j=0;j<data.length;j++){
+        for (i = 0; i < data.length; i++) {
+            for (j = 0; j < data.length; j++) {
                 // console.warn(data)
-                if(data[j]>data[j+1]){
+                if (data[j] > data[j + 1]) {
                     let temp = data[j]
-                    data[j]=data[j+1]
-                    data[j+1]=temp
+                    data[j] = data[j + 1]
+                    data[j + 1] = temp
                 }
             }
         }
         console.warn(data)
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
