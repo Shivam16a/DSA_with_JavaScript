@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue with input and buttons rear front and empty</title>
+
+</head>
+
+<body>
+    <input type="text" placeholder="Enter Element...." id="inputvalue">
+    <button onclick="enqueue()">Click</button><br>
+    <button onclick="dequeue()">Delete Element From Start</button><br>
+    <button onclick="display()">Display Element</button>
+    <button onclick="front()">Find Front Element</button>
+    <button onclick="rear()">Find Rear Element</button>
+    <button onclick="isEmpty()">Find Elemet is Empty or not</button><br>
+    <p id="result"></p>
+
+    <script>
+        let item = [];
+        let currentSize = item.length;
+        let maxSize = 5;
+        // let result = document.getElementById("result");
+        function enqueue() {
+            let inputvalue = document.getElementById("inputvalue").value;
+            if (currentSize >= maxSize) {
+                alert("Queue is full");
+                return;
+            }
+            item[currentSize] = inputvalue;
+            currentSize++;
+
+            document.getElementById("inputvalue").value = "";
+        }
+        // enqueue(inputvalue);
+
+        function dequeue() {
+            if (currentSize > 0) {
+                for (let i = 0; i < item.length; i++) {
+                    item[i] = item[i + 1];
+                }
+                currentSize--;
+                item.length = currentSize;
+            } else {
+                alert("Queue is Impty");
+                return;
+            }
+        }
+
+        function display() {
+            // console.warn(item);
+            document.getElementById("result").innerHTML = "Queue: " + item.join("→");
+        }
+
+        function front() {
+            if (item[0] == null) {
+                alert("Queue is Empty");
+                return;
+            }
+            // console.warn("Front Value is: ", item[0]);
+            document.getElementById("result").innerHTML = "Front Value Is: " + item[0];
+        }
+        function rear() {
+            if (item[currentSize - 1] == null) {
+                alert("Queue is Empty");
+                return;
+            }
+            // console.warn("Reare Value is: ", item[currentSize - 1]);
+            document.getElementById("result").innerHTML = "Reare Value is: " + item[currentSize - 1];
+        }
+
+        function isEmpty() {
+            if (item[0] == null || item[currentSize - 1] == null) {
+                console.warn("Queue is Empty");
+                return;
+            }
+            // console.warn("Queue is not empty: ", item);
+            document.getElementById("result").innerHTML = "Queue is not empty: " + item.join("→");
+        }
+    </script>
+</body>
+
+</html>
