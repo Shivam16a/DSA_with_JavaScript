@@ -1,5 +1,3 @@
-``` Sorting
-
 ## What is Sorting in DSA?
 
  **Sorting** is the process of arranging data elements in a particular order, usually **ascending** or **descending** order.
@@ -33,4 +31,3 @@
  **Sorting = Arranging data in a specific order.**
 
  The **most important sorting algorithms for beginners** are **Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort**.
-```

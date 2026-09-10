@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <h1>Selection Sort Descending Order with two method</h1>
+
+    <script>
+        let item = [12, 15, 8, 18, 31, 36, 52];
+        // let first;
+        function selectioSortm1(item) {
+            let first;
+            for (let i = item.length - 1; i >= 0; i--) {
+                first = i;
+                for (let j = i - 1; j >= 0; j--) {
+                    if (item[j] < item[first]) {
+                        first = j;
+                    }
+                }
+                let temp = item[first];
+                item[first] = item[i];
+                item[i] = temp;
+            }
+            console.warn("Method 1: " + item)
+        }
+        selectioSortm1(item);
+        // console.warn(item)
+
+        function selectionSortm2(item) {
+            let first;
+            for (let i = item.length - 1; i >= 0; i--) {
+                first = i;
+                for (let j = i - 1; j >= 0; j--) {
+                    if (item[j] < item[first]) {
+                        first = j;
+                    }
+                }
+                let temp = item[first];
+                item[first] = item[i];
+                item[i] = temp;
+            }
+            console.warn("Method 2: " + item)
+        }
+        selectionSortm2(item)
+
+    </script>
+</body>
+
+</html>

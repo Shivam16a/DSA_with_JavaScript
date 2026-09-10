@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <h1>Selection Sort In JavaScript</h1>
+
+    <script>
+        let item = [12, 15, 8, 18, 31, 36, 52];
+        // let first;
+        function selectioSort(item) {
+            let first;
+            for (let i = 0; i < item.length; i++) {
+                first = i;
+                for (let j = i + 1; j < item.length; j++) {
+                    if (item[j] < item[first]) {
+                        first = j;
+                    }
+                }
+                let temp = item[first];
+                item[first] = item[i];
+                item[i] = temp;
+            }
+            // console.warn(item)
+        }
+        selectioSort(item);
+        console.warn(item)
+
+    </script>
+</body>
+
+</html>
