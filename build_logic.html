@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>think different</title>
+</head>
+
+<body>
+    <h2>Find Even Values from array, Make Double of every element and Find Array length manualy</h2>
+
+    <script>
+        let item = [10, 12, 5, 6, 9, 7, 15, 1, 21, 4];
+        let evenArray = [];
+        let count = 0;
+        for (let i = 0; i < item.length; i++) {
+            if (item[i] % 2 == 0) {
+                count++;
+                evenArray[count - 1] = item[i] * 2;
+            }
+        }
+
+        console.warn(evenArray);
+        console.warn(count);
+    </script>
+</body>
+
+</html>
