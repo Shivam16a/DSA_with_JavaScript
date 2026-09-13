@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check string is anagram</title>
+</head>
+
+<body>
+    <script>
+        function anagram(str1, str2) {
+            let objectstr = {};
+            if (str1.length !== str2.length) {
+                return "string length not match";
+            }
+
+            for (ch of str1) {
+                objectstr[ch] = (objectstr[ch] || 0) + 1;
+            }
+
+            for (ch of str2) {
+                objectstr[ch] = (objectstr[ch] || 0) + 1;
+            }
+            if (!objectstr[ch]) {
+                return "charater not match";
+            }
+            objectstr[ch]--;
+
+            return "all character matches string is angram"
+        }
+        console.warn(anagram("shivam", "masihv"));
+    </script>
+</body>
+
+</html>
