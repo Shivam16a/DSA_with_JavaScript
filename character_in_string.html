@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find maximum character in string</title>
+</head>
+
+<body>
+    <h1>check maximum character occurs in string</h1>
+    <script>
+        let str = "hello shivam raja";
+        let strObj = {};
+        let maxkey = '';
+
+        for (let i = 0; i < str.length; i++) {
+            // console.warn(str[i]);
+            let key = str[i];
+            if (!strObj[key]) {
+                strObj[key] = 0;
+            }
+            strObj[key]++;
+            if (maxkey == '' || strObj[key] > strObj[maxkey]) {
+                maxkey = key;
+            }
+        }
+        console.warn(strObj);
+        console.warn(maxkey)
+    </script>
+</body>
+
+</html>
