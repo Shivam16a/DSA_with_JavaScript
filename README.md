@@ -31,3 +31,15 @@
  **Sorting = Arranging data in a specific order.**
 
  The **most important sorting algorithms for beginners** are **Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort**.
+
+ ## What is Hash Table
+ * A **hash table** (also called a **hash map**) is a data structure used to store and retrieve data very quickly using **key–value pairs.**
+
+```
+Key       Value
+"John"    25
+"Alice"   30
+"Bob"     22
+```
+A **hash function** converts each key into an index (location) in an array:
+
