@@ -43,3 +43,6 @@ Key       Value
 ```
 A **hash function** converts each key into an index (location) in an array:
 
+## What is Map in DSA with JavaScript
+
+* In DSA with JavaScript, **Map** is a built-in data structure used to store key-value pairs.
