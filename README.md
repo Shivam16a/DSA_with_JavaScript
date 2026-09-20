@@ -46,3 +46,41 @@ A **hash function** converts each key into an index (location) in an array:
 ## What is Map in DSA with JavaScript
 
 * In DSA with JavaScript, **Map** is a built-in data structure used to store key-value pairs.
+
+In **DSA (Data Structures and Algorithms)**, a **Set** is a data structure that stores **unique values**.
+
+ ### Example
+
+```
+const set = new Set();
+
+set.add(10);
+set.add(20);
+set.add(10);
+
+console.log(set);
+```
+
+ Output:
+
+```
+Set { 10, 20 }
+```
+
+ The second `10` is ignored because a Set **does not allow duplicates**.
+
+ ### Important operations
+
+```
+set.add(5);       // Add
+set.has(5);       // Check → true
+set.delete(5);    // Remove
+set.size;         // Number of elements
+```
+
+ ### Simple definition
+
+ > **Set = a collection of unique elements.**
+
+ In DSA, Sets are commonly used for **removing duplicates, fast lookup, finding duplicates, and checking whether an element exists**.
+ 
