@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Large Element From Array</title>
+</head>
+
+<body>
+    <h1>Find Large Element From Array</h1>
+
+    <script>
+
+        let count = 0;
+
+        function largeelement() {
+            let data = [3, 7, 2, 9, 4];
+            let largest = data[0]
+            for (let i = 0; i < data.length; i++) {
+                if (data[i] > largest) {
+                    largest = data[i];
+                }
+            }
+            console.warn(largest);
+        }
+        largeelement();
+    </script>
+</body>
+
+</html>
