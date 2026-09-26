@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Two Large number from array</title>
+</head>
+
+<body>
+    <h1>Finding Two Large Number From Array</h1>
+    <script>
+        function twolargenumber() {
+            let item = [9, 8, 5, 1, 0, 6, 2, 3, 7];
+            let large = -Infinity;
+            let secondLarge = -Infinity;
+            for (let i = 0; i < item.length; i++) {
+                if (item[i] > large) {
+                    secondLarge = large
+                    large = item[i];
+                }else if (secondLarge < item[i] && item[i] !== large){
+                    secondLarge = item[i];
+                }
+            }
+            console.warn(large);
+            console.warn(secondLarge);
+        }
+
+        twolargenumber();
+    </script>
+</body>
+
+</html>
