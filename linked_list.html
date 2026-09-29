@@ -27,6 +27,28 @@
                 this.tail = newNode;
                 this.size += 1;
             }
+            updateNode(oldNode, newNode) {
+                let currentNode = this.head;
+                let counter = 0;
+                while (counter < this.size) {
+                    if (currentNode.value === oldNode) {
+                        currentNode.value = newNode;
+                        return;
+                    }
+                    currentNode = currentNode.next;
+                    counter++;
+                }
+            }
+            travers() {
+                let counter = 0;
+                let currentNode = this.head;
+                while (counter < this.size) {
+                    console.warn(currentNode);
+                    currentNode = currentNode.next;
+                    counter++;
+                }
+                // console.warn(currentNode);
+            }
         }
 
         let list = new List(200);
@@ -36,7 +58,9 @@
         list.appendNode(600);
         list.appendNode(700);
         list.appendNode(800);
-        console.warn(list);
+        list.updateNode(400, 999);
+        list.travers();
+        // console.warn(list);
     </script>
 </body>
 
