@@ -39,6 +39,20 @@
                     counter++;
                 }
             }
+            deleteNode(index) {
+                let lead = this.head;
+                let counter = 1;
+                if (index === 1) {
+                    this.head = this.head.next;
+                } else {
+                    while (counter < index - 1) {
+                        lead = lead.next;
+                        counter++;
+                    }
+                    let nextNode = lead.next.next;
+                    lead.next = nextNode;
+                }
+            }
             travers() {
                 let counter = 0;
                 let currentNode = this.head;
@@ -59,6 +73,7 @@
         list.appendNode(700);
         list.appendNode(800);
         list.updateNode(400, 999);
+        list.deleteNode(4);
         list.travers();
         // console.warn(list);
     </script>
