@@ -56,9 +56,14 @@
             insertNode(index, value) {
                 let counter = 1;
                 let currentNode = this.head;
-                while (counter > index) {
+                while (counter < index) {
                     currentNode = currentNode.next;
                     counter++;
+                }
+                let nextNode = currentNode.next;
+                currentNode.next = {
+                    value: value,
+                    next: nextNode,
                 }
             }
 
@@ -83,7 +88,7 @@
         list.appendNode(800);
         list.updateNode(400, 999);
         list.insertNode(2, 456);
-        list.deleteNode(5);
+        // list.deleteNode(5);
         list.travers();
         // console.warn(list);
     </script>
