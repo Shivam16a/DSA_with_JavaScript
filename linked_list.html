@@ -77,6 +77,22 @@
                 }
                 // console.warn(currentNode);
             }
+
+            searchNode(data) {
+                let result = undefined;
+                let lead = this.head;
+                let loop = true;
+
+                while (loop) {
+                    lead = lead.next;
+                    loop = !!lead;
+                    if (loop && lead.value === data) {
+                        loop = false;
+                        result = lead;
+                    }
+                }
+                console.warn(result);
+            }
         }
 
         let list = new List(200);
@@ -90,6 +106,7 @@
         list.insertNode(2, 456);
         // list.deleteNode(5);
         list.travers();
+        list.searchNode(300);
         // console.warn(list);
     </script>
 </body>
