@@ -84,3 +84,72 @@ set.size;         // Number of elements
 
  In DSA, Sets are commonly used for **removing duplicates, fast lookup, finding duplicates, and checking whether an element exists**.
  
+ 
+# Linked List in JavaScript
+
+## Definition
+A **Linked List** is a linear data structure in which elements, called nodes, are connected using references. Each node contains data and a reference to the next node.
+
+## Example
+
+```javascript
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+
+const first = new Node(10);
+const second = new Node(20);
+const third = new Node(30);
+
+first.next = second;
+second.next = third;
+
+// Traverse the linked list
+let current = first;
+
+while (current !== null) {
+  console.log(current.data);
+  current = current.next;
+}
+```
+
+**Output:**
+```text
+10
+20
+30
+```
+
+## Types of Linked Lists
+
+- **Singly Linked List:** Each node points to the next node.
+- **Doubly Linked List:** Each node points to both the previous and next nodes.
+- **Circular Linked List:** The last node points back to the first node.
+
+## Advantages
+
+- Dynamic size.
+- Efficient insertion and deletion when the required position is known.
+- Does not require contiguous memory locations.
+
+## Disadvantages
+
+- Extra memory is required to store references.
+- Elements must be accessed sequentially.
+- More complex to implement than arrays.
+
+## Time Complexity
+
+| Operation | Time Complexity |
+|---|---|
+| Access by index | O(n) |
+| Search | O(n) |
+| Insert at the beginning | O(1) |
+| Delete from the beginning | O(1) |
+
+## Conclusion
+
+A linked list is useful when frequent insertions and deletions are required. Unlike arrays, linked lists do not provide direct access to elements by index.
