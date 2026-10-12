@@ -153,3 +153,48 @@ while (current !== null) {
 ## Conclusion
 
 A linked list is useful when frequent insertions and deletions are required. Unlike arrays, linked lists do not provide direct access to elements by index.
+
+## 1. What is Tree DS?
+
+A Tree Data Structure is a non-linear data structure that stores data in the form of nodes connected by edges.
+
+Example: A family tree or a folder structure on a computer.
+
+## 2. What is a Binary Tree?
+
+A Binary Tree is a type of tree in which each node can have a maximum of two children: a left child and a right child.
+
+Example: A node can have 10 as its left child and 20 as its right child.
+
+## 3. What is a Binary Search Tree (BST)?
+
+A Binary Search Tree (BST) is a binary tree in which smaller values are placed on the left side and greater values are placed on the right side of a node.
+
+Example: If the root is 50, then 30 goes to the left and 70 goes to the right.
+
+## 4. What is Tree Terminology?
+
+Tree terminology refers to the important terms used to describe the structure of a tree.
+
+- Node: A basic element that stores data.
+- Root: The topmost node of a tree.
+- Edge: A connection between two nodes.
+- Parent: A node that has one or more children.
+- Child: A node directly connected below a parent.
+- Sibling: Nodes that share the same parent.
+- Leaf Node: A node that has no children.
+- Degree: The number of children a node has.
+- Depth: The number of edges from the root to a node.
+- Height: The number of edges on the longest downward path from a node to a leaf.
+- Subtree: A node and all its descendants.
+
+## 5. What are the Operations of BST?
+
+BST operations are the actions performed to manage data in a Binary Search Tree.
+
+1. Insertion: Adding a new node to the BST.
+2. Searching: Finding a particular value in the BST.
+3. Deletion: Removing a node from the BST.
+4. Traversal: Visiting all nodes of the BST in a specific order.
+5. Finding Minimum: Finding the smallest value in the BST.
+6. Finding Maximum: Finding the largest value in the BST.
